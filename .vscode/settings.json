@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.ets": "typescript",
+        "map": "cpp",
+        "chrono": "cpp",
+        "vector": "cpp",
+        "functional": "cpp",
+        "random": "cpp",
+        "format": "cpp",
+        "memory_resource": "cpp",
+        "regex": "cpp",
+        "hash_set": "cpp"
+    }
+}
