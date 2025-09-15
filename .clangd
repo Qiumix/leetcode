@@ -1,0 +1,10 @@
+CompileFlags:
+  Add:
+    - -I"D:/Scoop/apps/gcc/current/include"
+    - -I"D:/Scoop/apps/gcc/current/include/c++"
+    - -I"D:/Scoop/apps/gcc/current/include/c++/13.2.0"
+    - -I"D:/Scoop/apps/gcc/current/include/c++/13.2.0/bits"
+    - -std=c++17
+
+Flags:
+  - -frelaxed-template-template-args
