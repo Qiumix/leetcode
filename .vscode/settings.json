@@ -1,4 +1,5 @@
 {
+    "editor.tabSize": 2,
     "files.associations": {
         "*.ets": "typescript",
         "map": "cpp",
@@ -93,5 +94,6 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "commentTranslate.targetLanguage": "zh-CN"
 }

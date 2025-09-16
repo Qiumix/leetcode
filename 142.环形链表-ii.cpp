@@ -4,7 +4,7 @@
  * [142] 环形链表 II
  */
 
- // @lc code=start
+// @lc code=start
 // struct ListNode {
 //     int val;
 //     ListNode* next;
@@ -13,34 +13,29 @@
 
 class Solution {
 public:
-    ListNode* detectCycle(ListNode* head) {
-        if (head == nullptr)
-        {
-            return nullptr;
-        }
-
-        ListNode* fast = head;
-        ListNode* slow = head;
-        while (fast != nullptr) {
-            if (fast->next == nullptr)
-            {
-                return nullptr;
-            }
-            fast = fast->next->next;
-            slow = slow->next;
-            if (fast == slow)
-            {
-                ListNode* p = head;
-                while (p != slow)
-                {
-                    p = p->next;
-                    slow = slow->next;
-                }
-                return p;
-            }
-        }
-        return nullptr;
+  ListNode *detectCycle(ListNode *head) {
+    if (head == nullptr) {
+      return nullptr;
     }
+
+    ListNode *fast = head;
+    ListNode *slow = head;
+    while (fast != nullptr) {
+      if (fast->next == nullptr) {
+        return nullptr;
+      }
+      fast = fast->next->next;
+      slow = slow->next;
+      if (fast == slow) {
+        ListNode *p = head;
+        while (p != slow) {
+          p = p->next;
+          slow = slow->next;
+        }
+        return p;
+      }
+    }
+    return nullptr;
+  }
 };
 // @lc code=end
-

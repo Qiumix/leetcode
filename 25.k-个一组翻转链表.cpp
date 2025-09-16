@@ -14,50 +14,42 @@
 //     ListNode(int x, ListNode* next) : val(x), next(next) {}
 // };
 
-class Solution
-{
+class Solution {
 public:
-    ListNode *reverseKGroup(ListNode *head, int k)
-    {
-        std::list<ListNode *> d;
-        ListNode *sentinel = new ListNode(0);
-        ListNode *sp = sentinel;
-        ListNode *p = head;
-        int count;
-        bool remain = false;
-        while (p != nullptr)
-        {
-            for (int i = 0; i < k; i++)
-            {
-                if (p == nullptr)
-                {
-                    remain = true;
-                    break;
-                }
-                d.push_back(p);
-                p = p->next;
-            }
-            if (remain)
-            {
-                break;
-            }
-            for (int i = 0; i < k; i++)
-            {
-                sp->next = d.back();
-                d.pop_back();
-                sp = sp->next;
-            }
+  ListNode *reverseKGroup(ListNode *head, int k) {
+    std::list<ListNode *> d;
+    ListNode *sentinel = new ListNode(0);
+    ListNode *sp = sentinel;
+    ListNode *p = head;
+    int count;
+    bool remain = false;
+    while (p != nullptr) {
+      for (int i = 0; i < k; i++) {
+        if (p == nullptr) {
+          remain = true;
+          break;
         }
-        while (d.size() > 0)
-        {
-            sp->next = d.front();
-            d.pop_front();
-            sp = sp->next;
-        }
-        sp->next = nullptr;
-        head = sentinel->next;
-        delete (sentinel);
-        return head;
+        d.push_back(p);
+        p = p->next;
+      }
+      if (remain) {
+        break;
+      }
+      for (int i = 0; i < k; i++) {
+        sp->next = d.back();
+        d.pop_back();
+        sp = sp->next;
+      }
     }
+    while (d.size() > 0) {
+      sp->next = d.front();
+      d.pop_front();
+      sp = sp->next;
+    }
+    sp->next = nullptr;
+    head = sentinel->next;
+    delete (sentinel);
+    return head;
+  }
 };
 // @lc code=end

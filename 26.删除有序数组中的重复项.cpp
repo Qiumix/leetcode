@@ -4,25 +4,25 @@
  * [26] 删除有序数组中的重复项
  */
 
- // @lc code=start
+// @lc code=start
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
-        int size = nums.size();
-        int fast = 1, slow = 1;
-        while (fast < size) {
-            if (nums[fast] != nums[fast - 1]) {
-                nums[slow++] = nums[fast];
-            }
-            fast++;
-        }
-        return slow;
+  int removeDuplicates(vector<int> &nums) {
+    int size = nums.size();
+    int fast = 1, slow = 1;
+    while (fast < size) {
+      if (nums[fast] != nums[fast - 1]) {
+        nums[slow++] = nums[fast];
+      }
+      fast++;
     }
-private:
+    return slow;
+  }
 
+private:
 };
 // @lc code=end
 // int main() {
