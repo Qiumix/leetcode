@@ -1,10 +1,12 @@
 CompileFlags:
   Add:
-    - -I"D:/Scoop/apps/gcc/current/include"
-    - -I"D:/Scoop/apps/gcc/current/include/c++"
-    - -I"D:/Scoop/apps/gcc/current/include/c++/13.2.0"
-    - -I"D:/Scoop/apps/gcc/current/include/c++/13.2.0/bits"
-    - -std=c++17
+    - --gcc-toolchain=D:/Scoop/apps/gcc/current
+    - -ID:/Scoop/apps/gcc/current/include/c++/13.2.0/x86_64-w64-mingw32
+    - -ID:/Scoop/apps/gcc/current/include/c++/13.2.0
+    - -ID:/Scoop/apps/gcc/current/include
+    - -std=c++14
+    - fgnu89-inline
+    - -D__MINGW32__
 
-Flags:
-  - -frelaxed-template-template-args
+Remove:
+  - -stdlib=libc++
