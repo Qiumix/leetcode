@@ -10,10 +10,14 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\a.exe",
+				"-fexec-charset=utf-8"
 			],
 			"options": {
-				"cwd": "D:/Scoop/apps/gcc/current/bin"
+				"cwd": "D:/Scoop/apps/gcc/current/bin",
+				"shell": {
+					"executable": "D:/Scoop/shims/pwsh.exe"
+				}
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -23,6 +27,6 @@
 				"isDefault": true
 			},
 			"detail": "compiler: D:/Scoop/apps/gcc/current/bin/g++.exe"
-		}
+		},
 	]
 }

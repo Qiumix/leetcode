@@ -22,3 +22,10 @@ public:
   }
 };
 // @lc code=end
+int main(int argc, char const *argv[]) {
+  for (int i = 0; i < 100; i++) {
+    cout << "hello" << endl;
+  }
+
+  return 0;
+}
